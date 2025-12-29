@@ -52,8 +52,14 @@ Copy code
 python -m venv venv
 source venv/bin/activate   # Windows: venv\Scripts\activate
 3️⃣ Install dependencies
-bash
-Copy code
+
+pip install requests
+langgraph
+langchain-openai
+openai
+python-dotenv
+
+
 pip install requests python-dotenv
 4️⃣ Set environment variables
 Create a .env file:
@@ -67,7 +73,7 @@ N8N_WEBHOOK_URL=your_n8n_webhook_url_here
 bash
 Copy code
 python webhook.py
-📌 Example Payload Sent to n8n
+ Example Payload Sent to n8n
 json
 Copy code
 {
@@ -92,10 +98,10 @@ Ticket creation systems
 
 Event-driven automation
 
-🏁 Conclusion
+ Conclusion
 This project shows how Python scripts can integrate with n8n webhooks to build reliable, event-driven automation systems with clean separation of logic and configuration.
 
-👤 Author
+ Author
 Aryan Tyagi
 
 
