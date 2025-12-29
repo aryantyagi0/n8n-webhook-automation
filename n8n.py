@@ -65,7 +65,7 @@ def call_n8n(state: SupportState):
     n8n_webhook_url = os.getenv("N8N_WEBHOOK_URL")
 
     if not state.get("email"):
-        print("❌ No email found. Skipping n8n call.")
+        print(" No email found. Skipping n8n call.")
         return state
 
     payload = {
@@ -77,7 +77,7 @@ def call_n8n(state: SupportState):
 
     response = requests.post(n8n_webhook_url, json=payload)
 
-    print("✅ n8n Response Status:", response.status_code)
+    print(" n8n Response Status:", response.status_code)
     return state
 
 # -------------------------
